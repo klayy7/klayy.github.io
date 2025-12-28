@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --default-bg-color: #778773;
+    --default-settings-color: #778773;
+    --default-timer-box-color: #a2bd99;
+    --default-drop-shadow-color: #6d7e67;
+    --default-button-text-color: #a2bd99;
+    --default-active-marker-color: #fffb00;
+    --default-font: "Jersey 10", "monospace"
+}
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    font-family: var(--default-font);
+    font-size: 105%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input,
+select {
+    border: 1px black;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    box-shadow: 5px 5px var(--default-drop-shadow-color);
+
+}
+
+button {
+    border: 0px;
+}
+
+body {
+    background-color: var(--default-bg-color);
+    color: white;
+}
+
+#page-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TIMER */
+
+#timer-box {
+    position: relative;
+    background-color: var(--default-timer-box-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.time-left {
+    font-weight: bold;
+    font-size: 9em;
+}
+
+.completed {
+    font-size: 1.5em;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+.buttons:hover>button {
+    cursor: pointer;
+}
+
+.buttons .focus:active {
+    transform: translate(-5px, 5px);
+    box-shadow: -3px 3px var(--default-drop-shadow-color);
+}
+
+.buttons .short:active {
+    transform: translate(-5px, 5px);
+    box-shadow: -3px 3px var(--default-drop-shadow-color);
+}
+
+.buttons .long:active {
+    transform: translate(-5px, 5px);
+    box-shadow: -3px 3px var(--default-drop-shadow-color);
+}
+
+.buttons .start:active {
+    transform: translate(-5px, 5px);
+    box-shadow: -3px 3px var(--default-drop-shadow-color);
+}
+
+.buttons button {
+    display: inline;
+    font-size: 1.5em;
+    background-color: white;
+    color: var(--default-button-text-color);
+    padding: 0px 10px;
+    border-radius: 5px;
+    box-shadow: -5px 5px var(--default-drop-shadow-color);
+}
+
+.start-button .start {
+    font-size: 5em;
+    background-color: white;
+    color: var(--default-button-text-color);
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#active-marker {
+    position: absolute;
+    top: 130%;
+    left: 13%;
+    width: 5%;
+    height: 10px;
+    background-color: var(--default-active-marker-color);
+    border-radius: 10px;
+    box-shadow: -1px 1px var(--default-drop-shadow-color);
+    border: 2px solid var(--default-drop-shadow-color);
+}
+
+/* SETTINGS */
+
+.settings-show {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 10%;
+    color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 30%;
+    height: 100%;
+    background-image: linear-gradient(to right, #eaf9d7 -100%, var(--default-bg-color) 60%);
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+
+.settings-hide {
+    display: none;
+}
+
+#settings-icon {
+    position: absolute;
+    object-fit: cover;
+    left: 2%;
+    top: 2%;
+    z-index: 1;
+}
+
+#settings-icon:hover {
+    cursor: pointer;
+}
+
+#save-button:active {
+    transform: translate(-5px, 5px);
+    box-shadow: -3px 3px var(--default-drop-shadow-color);
+}
+
+#save-button {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    padding: 0% 5%;
+    border-radius: 5px;
+    font-size: 25em;
+    box-shadow: -5px 5px var(--default-drop-shadow-color);
+}
+
+
+#settings-window p {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    font-size: 15em;
+}
+
+.timer-lengths {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+}
+
+.settings-sec>h3 {
+    font-weight: normal;
+    font-size: 30em;
+}
+
+.timer-lengths ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    width: 80%;
+}
+
+.timer-lengths ul li {
+    font-size: 15em;
+    display: inline;
+}
+
+.timer-inputs>input {
+    font-size: 30em;
+    width: 25%;
+}
+
+.timer-inputs {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.audio {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    left: 0%;
+}
+
+.audio select {
+    font-size: 15em;
+}
+
+.audio select:hover {
+    cursor: pointer;
+}
+
+#save-button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1595px) {
+    #timer-box {
+        width: 35%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:1401px) {
+    #timer-box {
+        width: 40%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:1245px) {
+    #timer-box {
+        width: 45%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:1132px) {
+    #timer-box {
+        width: 51%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:792px) {
+    #timer-box {
+        width: 72%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:549px) {
+    #timer-box {
+        width: 98%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:405px) {
+    .buttons button {
+        font-size: 1.3em;
+    }
+
+    #timer-box {
+        width: 95%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .buttons {
+        width: 100%;
+    }
+
+    .buttons button {
+        font-size: 1.2em;
+    }
+
+    #timer-box {
+        width: 95%;
+        height: 65%;
+    }
+}

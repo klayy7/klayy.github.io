@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yet Another Pomodoro Timer</title>
+    <link rel="stylesheet" href="pomodoro.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main id="page-wrapper">
+        <img id="settings-icon" src="Assets/hambuger.png" alt="settings-icon" width="30px" height="30px">
+
+        <div id="settings-window" class="settings-hide settings-show">
+
+            <div class="settings-sec timer-lengths">
+                <h3>Set Time (minutes)</h3>
+                <ul>
+                    <li>Focus</li>
+                    <li>Short Break</li>
+                    <li>Long Break</li>
+                </ul>
+                <div class="timer-inputs">
+                    <input id="focus-input" type="text" value="25">
+                    <input id="short-input" type="text" value="10">
+                    <input id="long-input" type="text" value="15">
+                </div>
+            </div>
+
+            <div class="settings-sec audio">
+                <h3>Set Alarm Sound</h3>
+                <!-- <button>Test Alarm</button> -->
+                <select name="alarm-sound" id="alarm-choices">
+                    <option value="default">Default</option>
+                    <option value="bedside">Bedside</option>
+                    <option value="electronic">Electronic</option>
+                </select>
+            </div>
+        
+            <button id="save-button">Save Settings</button>
+
+            <p>Made by Klayy</p>
+        </div>
+
+        <section id="timer-box">
+            <div class="buttons">
+                <button class="focus" id="focus-button">Focus</button>
+                <button class="short" id="short-button">Short Break</button>
+                <button class="long" id="long-button">Long Break</button>
+                <div id="active-marker"></div>
+            </div>
+
+            <div class="time-left">
+                <h1 id="timer">25:00</h1>
+            </div>
+
+            <div class="buttons start-button">
+                <button class="start" id="start-button">Start</button>
+            </div>
+
+            <h2 id="completed">Completed: 0</h2>
+        </section>
+
+    </main>
+</body>
+
+</html>
