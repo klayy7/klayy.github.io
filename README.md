@@ -1,2 +1,1 @@
-# klayy.github.io
-Yet Pomodoro Timer 
+# Yet Another Pomodoro Timer
